@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_to_do_list/const/colors.dart';
 import 'package:flutter_to_do_list/data/firestor.dart';
@@ -44,7 +43,7 @@ class _Add_creenState extends State<Add_creen> {
       children: [
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            primary: custom_green,
+            backgroundColor: custom_green,
             minimumSize: Size(170, 48),
           ),
           onPressed: () {
@@ -55,7 +54,7 @@ class _Add_creenState extends State<Add_creen> {
         ),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            primary: Colors.red,
+            backgroundColor: Colors.red,
             minimumSize: Size(170, 48),
           ),
           onPressed: () {
