@@ -4,16 +4,16 @@ import 'package:flutter_to_do_list/const/colors.dart';
 import 'package:flutter_to_do_list/screen/add_note_screen.dart';
 import 'package:flutter_to_do_list/widgets/stream_note.dart';
 
-class Home_Screen extends StatefulWidget {
-  const Home_Screen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<Home_Screen> createState() => _Home_ScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
 bool show = true;
 
-class _Home_ScreenState extends State<Home_Screen> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,11 +23,11 @@ class _Home_ScreenState extends State<Home_Screen> {
         child: FloatingActionButton(
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => Add_creen(),
+              builder: (context) => const AddCreen(),
             ));
           },
-          backgroundColor: custom_green,
-          child: Icon(Icons.add, size: 30),
+          backgroundColor: customGreen,
+          child: const Icon(Icons.add, size: 30),
         ),
       ),
       body: SafeArea(
@@ -47,7 +47,7 @@ class _Home_ScreenState extends State<Home_Screen> {
           },
           child: Column(
             children: [
-              Stream_note(false),
+              StreamNote(false),
               Text(
                 'isDone',
                 style: TextStyle(
@@ -55,7 +55,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                     color: Colors.grey.shade500,
                     fontWeight: FontWeight.bold),
               ),
-              Stream_note(true),
+              StreamNote(true),
             ],
           ),
         ),

@@ -4,19 +4,19 @@ import 'package:flutter_to_do_list/widgets/task_widgets.dart';
 
 import '../data/firestor.dart';
 
-class Stream_note extends StatelessWidget {
+class StreamNote extends StatelessWidget {
   bool done;
-  Stream_note(this.done, {super.key});
+  StreamNote(this.done, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
-        stream: Firestore_Datasource().stream(done),
+        stream: FirestoreDatasource().stream(done),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           }
-          final noteslist = Firestore_Datasource().getNotes(snapshot);
+          final noteslist = FirestoreDatasource().getNotes(snapshot);
           return ListView.builder(
             shrinkWrap: true,
             itemBuilder: (context, index) {
@@ -24,9 +24,9 @@ class Stream_note extends StatelessWidget {
               return Dismissible(
                   key: UniqueKey(),
                   onDismissed: (direction) {
-                    Firestore_Datasource().delet_note(note.id);
+                    FirestoreDatasource().deletNote(note.id);
                   },
-                  child: Task_Widget(note));
+                  child: TaskWidget(note));
             },
             itemCount: noteslist.length,
           );

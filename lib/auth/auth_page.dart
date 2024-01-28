@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_to_do_list/screen/SingUP.dart';
 import 'package:flutter_to_do_list/screen/login.dart';
 
-class Auth_Page extends StatefulWidget {
-  Auth_Page({super.key});
+class AuthPage extends StatefulWidget {
+  const AuthPage({super.key});
 
   @override
-  State<Auth_Page> createState() => _Auth_PageState();
+  State<AuthPage> createState() => _AuthPageState();
 }
 
-class _Auth_PageState extends State<Auth_Page> {
+class _AuthPageState extends State<AuthPage> {
   bool a = true;
   void to() {
     setState(() {
@@ -22,7 +22,7 @@ class _Auth_PageState extends State<Auth_Page> {
     if (a) {
       return LogIN_Screen(to);
     } else {
-      return SignUp_Screen(to);
+      return SignUpScreen(to);
     }
   }
 }

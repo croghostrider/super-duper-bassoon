@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_to_do_list/const/colors.dart';
 import 'package:flutter_to_do_list/data/firestor.dart';
 
-class Add_creen extends StatefulWidget {
-  const Add_creen({super.key});
+class AddCreen extends StatefulWidget {
+  const AddCreen({super.key});
 
   @override
-  State<Add_creen> createState() => _Add_creenState();
+  State<AddCreen> createState() => _AddCreenState();
 }
 
-class _Add_creenState extends State<Add_creen> {
+class _AddCreenState extends State<AddCreen> {
   final title = TextEditingController();
   final subtitle = TextEditingController();
 
-  FocusNode _focusNode1 = FocusNode();
-  FocusNode _focusNode2 = FocusNode();
+  final FocusNode _focusNode1 = FocusNode();
+  final FocusNode _focusNode2 = FocusNode();
   int indexx = 0;
   @override
   Widget build(BuildContext context) {
@@ -24,12 +24,12 @@ class _Add_creenState extends State<Add_creen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            title_widgets(),
-            SizedBox(height: 20),
-            subtite_wedgite(),
-            SizedBox(height: 20),
+            titleWidgets(),
+            const SizedBox(height: 20),
+            subtiteWedgite(),
+            const SizedBox(height: 20),
             imagess(),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             button()
           ],
         ),
@@ -43,24 +43,24 @@ class _Add_creenState extends State<Add_creen> {
       children: [
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: custom_green,
-            minimumSize: Size(170, 48),
+            backgroundColor: customGreen,
+            minimumSize: const Size(170, 48),
           ),
           onPressed: () {
-            Firestore_Datasource().AddNote(subtitle.text, title.text, indexx);
+            FirestoreDatasource().addNote(subtitle.text, title.text, indexx);
             Navigator.pop(context);
           },
-          child: Text('add task'),
+          child: const Text('add task'),
         ),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.red,
-            minimumSize: Size(170, 48),
+            minimumSize: const Size(170, 48),
           ),
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text('Cancel'),
+          child: const Text('Cancel'),
         ),
       ],
     );
@@ -86,14 +86,14 @@ class _Add_creenState extends State<Add_creen> {
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                     width: 2,
-                    color: indexx == index ? custom_green : Colors.grey,
+                    color: indexx == index ? customGreen : Colors.grey,
                   ),
                 ),
                 width: 140,
-                margin: EdgeInsets.all(8),
+                margin: const EdgeInsets.all(8),
                 child: Column(
                   children: [
-                    Image.asset('images/${index}.png'),
+                    Image.asset('images/$index.png'),
                   ],
                 ),
               ),
@@ -104,7 +104,7 @@ class _Add_creenState extends State<Add_creen> {
     );
   }
 
-  Widget title_widgets() {
+  Widget titleWidgets() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Container(
@@ -115,14 +115,14 @@ class _Add_creenState extends State<Add_creen> {
         child: TextField(
           controller: title,
           focusNode: _focusNode1,
-          style: TextStyle(fontSize: 18, color: Colors.black),
+          style: const TextStyle(fontSize: 18, color: Colors.black),
           decoration: InputDecoration(
               contentPadding:
-                  EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                  const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
               hintText: 'title',
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   color: Color(0xffc5c5c5),
                   width: 2.0,
                 ),
@@ -130,7 +130,7 @@ class _Add_creenState extends State<Add_creen> {
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(
-                  color: custom_green,
+                  color: customGreen,
                   width: 2.0,
                 ),
               )),
@@ -139,7 +139,7 @@ class _Add_creenState extends State<Add_creen> {
     );
   }
 
-  Padding subtite_wedgite() {
+  Padding subtiteWedgite() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Container(
@@ -151,13 +151,14 @@ class _Add_creenState extends State<Add_creen> {
           maxLines: 3,
           controller: subtitle,
           focusNode: _focusNode2,
-          style: TextStyle(fontSize: 18, color: Colors.black),
+          style: const TextStyle(fontSize: 18, color: Colors.black),
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+            contentPadding:
+                const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             hintText: 'subtitle',
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: Color(0xffc5c5c5),
                 width: 2.0,
               ),
@@ -165,7 +166,7 @@ class _Add_creenState extends State<Add_creen> {
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(
-                color: custom_green,
+                color: customGreen,
                 width: 2.0,
               ),
             ),
