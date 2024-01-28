@@ -44,37 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB5wSpFAL1_e5KJ9lFR36klbIcfxLjMgKs',
-    appId: '1:727830725517:web:648061c770e32aa39b33c4',
-    messagingSenderId: '727830725517',
-    projectId: 'todolist-10ef1',
-    authDomain: 'todolist-10ef1.firebaseapp.com',
-    storageBucket: 'todolist-10ef1.appspot.com',
+    apiKey: 'AIzaSyCIJSmthrtlXiXU9Q6oCZPtLeAJaC8P2B0',
+    appId: '1:645550125422:web:1835e59f9402695322517f',
+    messagingSenderId: '645550125422',
+    projectId: 'super-duper-bassoon-b7b6e',
+    authDomain: 'super-duper-bassoon-b7b6e.firebaseapp.com',
+    storageBucket: 'super-duper-bassoon-b7b6e.appspot.com',
+    measurementId: 'G-0GY1MRFR5C',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCRm_zOokLV-Nb_5zpJnjAuJlD93gA5e3o',
-    appId: '1:727830725517:android:e1aba9d6fc5baaad9b33c4',
-    messagingSenderId: '727830725517',
-    projectId: 'todolist-10ef1',
-    storageBucket: 'todolist-10ef1.appspot.com',
+    apiKey: 'AIzaSyDn_VXy0IiWDnk33bnN-e5NaV-v81rx2I8',
+    appId: '1:645550125422:android:f653a3fa7edecc3c22517f',
+    messagingSenderId: '645550125422',
+    projectId: 'super-duper-bassoon-b7b6e',
+    storageBucket: 'super-duper-bassoon-b7b6e.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD9iVn-6Ph5fLkQ2_5e3trgE67Spmri9jY',
-    appId: '1:727830725517:ios:161a0940e6b089849b33c4',
-    messagingSenderId: '727830725517',
-    projectId: 'todolist-10ef1',
-    storageBucket: 'todolist-10ef1.appspot.com',
+    apiKey: 'AIzaSyCtkYX12EI1YfAzDxItWepOvbtZHHDxz_8',
+    appId: '1:645550125422:ios:94a69fa8b93ba1f322517f',
+    messagingSenderId: '645550125422',
+    projectId: 'super-duper-bassoon-b7b6e',
+    storageBucket: 'super-duper-bassoon-b7b6e.appspot.com',
     iosBundleId: 'com.example.flutterToDoList',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyD9iVn-6Ph5fLkQ2_5e3trgE67Spmri9jY',
-    appId: '1:727830725517:ios:6f0305078332755a9b33c4',
-    messagingSenderId: '727830725517',
-    projectId: 'todolist-10ef1',
-    storageBucket: 'todolist-10ef1.appspot.com',
+    apiKey: 'AIzaSyCtkYX12EI1YfAzDxItWepOvbtZHHDxz_8',
+    appId: '1:645550125422:ios:83f2d6a9417234c222517f',
+    messagingSenderId: '645550125422',
+    projectId: 'super-duper-bassoon-b7b6e',
+    storageBucket: 'super-duper-bassoon-b7b6e.appspot.com',
     iosBundleId: 'com.example.flutterToDoList.RunnerTests',
   );
 }
